@@ -4,17 +4,16 @@ html {
 	background-color: #b30000;
 }
 body {
-	background-color: #ffffff;
-	width: 80%;
-	length: 80%;
-	margin-left: auto;
-	margin-right: auto;
+    background-color: #D3D3D3;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .navigation {
-	background-color:#ffffff;
-	color: #b30000;
-	width: 95%;
-	display:table;
+    background-color: #b30000;
+    color: #ffffff;
+    width: 95%;
+    display: table;
 }
     .navigation li {
         display: table-cell;
