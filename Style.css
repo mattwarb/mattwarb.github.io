@@ -1,16 +1,16 @@
 @CHARSET "ISO-8859-1";
 
 html {
-	background-color: #b30000;
+	background-color: #7e0a1b;
 }
 body {
-    background-color: #D3D3D3;
+    background-color: #7e0a1b;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 .navigation {
-    background-color: #b30000;
+    background-color: #7e0a1b;
     color: #ffffff;
     width: 100%;
     display: table;
@@ -32,3 +32,41 @@ body {
         color: white;
 
     }
+
+    h1{
+        text-align:center;
+    }
+
+    footer{
+
+        text-align: center;
+    }
+
+.navigation li:hover {
+    background-color: darkred;
+}
+
+
+p{
+
+    color: white;
+}
+
+ul {
+
+color: white;}
+
+ol{
+
+    color: white;
+}
+
+table{
+
+    color: white;
+}
+
+h3{
+
+    color: white;
+}
