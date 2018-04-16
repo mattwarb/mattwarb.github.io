@@ -16,3 +16,9 @@ body {
 	width: 95%;
 	display:table;
 }
+    .navigation li {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        float: left;
+        width: 33%;
