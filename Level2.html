@@ -33,6 +33,82 @@
 
 	</a>
 
+	<p>
+
+		<script>
+
+			//Iteration 3 ----------------------FIZZBUZZ
+
+			for(i=1;i<=100;i++){
+
+			if(!(i%3) && !(i%5)){
+			document.write('<br>FIZZBUZZ');
+
+			}
+
+			else if(!(i%3) && i%5){
+
+			document.write('<br>FIZZ');
+
+			}
+
+			else if(!(i%5) && i%3){
+
+			document.write('<br>BUZZ');
+
+			}
+
+
+			else{
+
+			document.write('<br>' + i);
+
+			}
+
+			}
+			
+	/*function createFIZZBUZZ(){ 
+
+		var fizzName = document.getElementById('FizzName').value;
+		var buzzName = document.getElementById('BuzzName').value;
+		var fizzBuzzName = fizzName + buzzName;
+		var maxNumber = document.getElementById('maxNumber').value;
+		var maxN = parseInt(maxNumber);
+		for(i=1;i<=maxN;i++){
+
+			if(!(i%3) && !(i%5)){
+
+				document.getElementById('fizzBuzzPlace').innerHTML = "<br>" + fizzBuzzName;
+				}
+			else if(!(i%3) && i%5){
+
+				document.getElementById('fizzBuzzPlace').innerHTML = "<br>" + fizzName;
+				}
+			else if(!(i%5) && i%3){
+				document.getElementById('fizzBuzzPlace').innerHTML = "<br>" + buzzName;
+				}
+			else{
+				document.getElementById('fizzBuzzPlace').innerHTML = "<br>" + i;
+				}
+			}
+		}*/
+
+
+		</script>
+
+
+		<br />
+		<textarea id="FizzName" placeholder="Enter FIZZ word"></textarea>
+		<br />
+		<textarea id="BuzzName" placeholder="Enter BUZZ Name"></textarea>
+		<br />
+		<textarea id="maxNumber" placeholder="Enter Number To Count To"></textarea>
+		<br />
+		<button onclick="createFIZZBUZZ()">Create FIZZBUZZ</button>
+		<br />
+	<p id="fizzBuzzPlace">     </p>
+
+	</p>
 
 
 
