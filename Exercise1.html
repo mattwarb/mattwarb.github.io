@@ -124,17 +124,36 @@
 		}
 
 
-		//Functions 3/ Events 2 -----------------------------
+		//Functions 3/ Events 2 ----------------------------- create text boxes and buttons that let you create a person object, output the person object, and edit it 
 
 
 
+		function createPerson(){
+		
+		var name = document.getElementById('Name').value;
+		var age = document.getElementById('Age').value;
+		var occupation = document.getElementById('Occupation').value;
 
+		document.getElementById('detailsDisplay').innerHTML = "Your name is " + name + ", you are aged " + age + ", and you work as a " + occupation;
+		
+		}
 
 
 
 	</script>
 		<br />
 			<button onclick="sayHello()">Say Hello </button> 
+		<br />
+			<textarea id="Name" placeholder="Enter Name"></textarea>
+		<br />
+			<textarea id="Age" placeholder="Enter Age"></textarea>
+		<br />
+			<textarea id="Occupation" placeholder= "Enter Occupation"></textarea>
+		<br />
+			<button onclick="createPerson()">Create Person</button>
+		<br />
+		<p id = "detailsDisplay">     </p>
+
 		
 
 		</p>
