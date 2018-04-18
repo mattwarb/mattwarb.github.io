@@ -39,7 +39,7 @@
 
             //Iteration 3 ----------------------FIZZBUZZ
 
-            for (i = 1; i <= 100; i++) {
+          /*  for (i = 1; i <= 100; i++) {
 
                 if (!(i % 3) && !(i % 5)) {
                     document.write('<br>FIZZBUZZ');
@@ -65,7 +65,7 @@
 
                 }
 
-            }
+            }*/
 
             function createFIZZBUZZ() {
 
@@ -74,24 +74,32 @@
                 var fizzBuzzName = fizzName + buzzName;
                 var maxNumber = document.getElementById('maxNumber').value;
                 var maxN = parseInt(maxNumber);
-                for (i = 1; i <= maxN; i++) {
+                if (!isNaN(maxN)) {
+                    for (i = 1; i <= maxN; i++) {
 
-                    if (!(i % 3) && !(i % 5)) {
+                        if (!(i % 3) && !(i % 5)) {
 
-                        document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + fizzBuzzName;
-                    }
-                    else if (!(i % 3) && i % 5) {
+                            document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + fizzBuzzName;
+                        }
+                        else if (!(i % 3) && i % 5) {
 
-                        document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + fizzName;
-                    }
-                    else if (!(i % 5) && i % 3) {
-                        document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + buzzName;
-                    }
-                    else {
-                        document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + i;
+                            document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + fizzName;
+                        }
+                        else if (!(i % 5) && i % 3) {
+                            document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + buzzName;
+                        }
+                        else {
+                            document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + i;
+                        }
                     }
                 }
-            }
+
+                else {
+                    document.getElementById('fizzBuzzPlace').innerHTML += "Enter a number you fucking clown";
+                }
+
+                }
+
 
             //iteration 4 ----------------------------------- accept number, then output at each iteration
             //-----------------------------------------------if # /3, divide by 3, if not, add 1 or subtract 1, then divide by 3. stop at 1
@@ -142,28 +150,28 @@
             function checkTriple() {
 
                 var striiing = document.getElementById('Striiing').value;
-                var arrray = striiing.split('');
+                var arrray = striiing.split(''); //turns string to array
                 var arrrayLength = arrray.length;
                 //console.log(arrray);
 
                 var i = 0;
-                var j = i + 1;
-                var k = j + 1;
+               // var j = i + 1;
+               // var k = j + 1;
                 var N = 0;
 
 
                 for (i = 0; i < (arrrayLength - 2); i++) {
 
-                    if (arrray[i] === arrray[i+1] && arrray[i] === arrray[i+2]) {
+                    if (arrray[i] === arrray[i + 1] && arrray[i] === arrray[i + 2]) {
 
 
-                       N++
+                        N++
 
-                        
+
 
                     }
 
-                    
+
 
                 }
 
@@ -173,9 +181,79 @@
             }
 
 
+            //DOM 1 ----------------------------------------------Create function that creates a paragrh,
+            //allows you to type what you want there in a text box, and then delete the paragraph
 
 
 
+
+
+            function createParagraph() {
+
+
+
+
+
+                var paragraph = document.createElement("p"); //create new element <p>
+                var node = document.createTextNode("Your words will appear here"); //this puts text in the element
+                paragraph.appendChild(node); //attaches the two together
+                paragraph.setAttribute("id","masterPara");
+                var element = document.getElementById("para"); //find another element
+                element.appendChild(paragraph); //attach your element to the found element
+                var button = document.createElement("button");
+                
+                //breaks
+                var brk = document.createElement("br");
+                var brk2 = document.createElement("br");
+                var brk3 = document.createElement("br");
+
+
+                //box
+                var box = document.createElement("textarea");
+                box.setAttribute("Id", "Input");
+                //buttons
+                var inputButton = document.createElement("button");
+                inputButton.setAttribute("onlick", "fillParagraph()");
+                var words = document.createTextNode("Fill Paragraph");
+                inputButton.appendChild(words);
+
+                var deleteButton = document.createElement("button");
+                deleteButton.setAttribute("onlick", "deleteParagraph()");
+                var words = document.createTextNode("Delete Paragraph");
+                deleteButton.appendChild(words);
+
+                //sticking everything together
+                var newElement = document.getElementById("masterPara");
+                newElement.appendChild(brk);
+                newElement.appendChild(box);
+                newElement.appendChild(brk2);
+                newElement.appendChild(inputButton);
+                newElement.appendChild(brk3);
+                newElement.appendChild(deleteButton);
+                
+               
+                function fillParagraph() {
+
+                    var inputString = document.getElementById("Input").value;
+                    console.log(inputString);
+                    var textString = document.createTextNode("inputString");
+                    var newElement3 = document.getElementById("masterPara");
+                    newElement3.appendChild(textString);
+
+
+                }
+                   
+
+            }
+
+         
+
+            function deleteParagraph() {
+
+
+
+
+            }
 
 
 
@@ -215,6 +293,19 @@
     <br />
     <p id="tripleStriiing"></p>
     </p>
+
+
+    <br />
+    <button id =" createPara" onclick="createParagraph()">Click Me!</button>
+    <br />
+
+    <div id="para"></div>
+
+
+
+
+
+
 
 
 
