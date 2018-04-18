@@ -154,7 +154,7 @@
 
                 for (i = 0; i < (arrrayLength - 2); i++) {
 
-                    if (arrray[i] == arrray[j] && arrray[j] == arrray[k] && arrray[i] == arrray[k]) {
+                    if (arrray[i] === arrray[i+1] && arrray[i] === arrray[i+2]) {
 
 
                        N++
@@ -163,11 +163,11 @@
 
                     }
 
-                    document.getElementById('tripleStriiing').innerHTML += "<br>There are " + N + " Triples in your string! ";
+                    
 
                 }
 
-
+                document.getElementById('tripleStriiing').innerHTML += "<br>There are " + N + " Triples in your string! ";
 
 
             }
