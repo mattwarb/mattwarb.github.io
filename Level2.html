@@ -9,106 +9,212 @@
 </head>
 
 <body>
-	<a href="https://leekspin.com/">
-		<img alt="The Story of a Poor Boy Header"
-			 src="header.png"
-			 width="100%" length=" 100%">
-	</a>
+    <a href="https://leekspin.com/">
+        <img alt="The Story of a Poor Boy Header"
+             src="header.png"
+             width="100%" length=" 100%">
+    </a>
 
-	<div class="navigation">
-		<ol>
-			<li> <a href="index.html"> <h3> Home</h3></a></li>
-			<li> <a href="AboutMe.html"><h3>About Me</h3></a></li>
-			<li> <a href="Projects.html"><h3>Projects</h3></a></li>
-		</ol>
-	</div>
-
-
+    <div class="navigation">
+        <ol>
+            <li> <a href="index.html"> <h3> Home</h3></a></li>
+            <li> <a href="AboutMe.html"><h3>About Me</h3></a></li>
+            <li> <a href="Projects.html"><h3>Projects</h3></a></li>
+        </ol>
+    </div>
 
 
-	<a href="https://leekspin.com/">
-		<img alt="The Story of a Poor Boy"
-			 src="Pic.png"
-			 width="200px" height= ="200 px" />
-
-	</a>
-
-	<p>
-
-		<script>
-
-			//Iteration 3 ----------------------FIZZBUZZ
-
-			for(i=1;i<=100;i++){
-
-			if(!(i%3) && !(i%5)){
-			document.write('<br>FIZZBUZZ');
-
-			}
-
-			else if(!(i%3) && i%5){
-
-			document.write('<br>FIZZ');
-
-			}
-
-			else if(!(i%5) && i%3){
-
-			document.write('<br>BUZZ');
-
-			}
 
 
-			else{
+    <a href="https://leekspin.com/">
+        <img alt="The Story of a Poor Boy"
+             src="Pic.png"
+             width="200px" height= ="200 px" />
 
-			document.write('<br>' + i);
+    </a>
 
-			}
+    <p>
 
-			}
-			
-	/*function createFIZZBUZZ(){ 
+        <script>
 
-		var fizzName = document.getElementById('FizzName').value;
-		var buzzName = document.getElementById('BuzzName').value;
-		var fizzBuzzName = fizzName + buzzName;
-		var maxNumber = document.getElementById('maxNumber').value;
-		var maxN = parseInt(maxNumber);
-		for(i=1;i<=maxN;i++){
+            //Iteration 3 ----------------------FIZZBUZZ
 
-			if(!(i%3) && !(i%5)){
+            for (i = 1; i <= 100; i++) {
 
-				document.getElementById('fizzBuzzPlace').innerHTML = "<br>" + fizzBuzzName;
-				}
-			else if(!(i%3) && i%5){
+                if (!(i % 3) && !(i % 5)) {
+                    document.write('<br>FIZZBUZZ');
 
-				document.getElementById('fizzBuzzPlace').innerHTML = "<br>" + fizzName;
-				}
-			else if(!(i%5) && i%3){
-				document.getElementById('fizzBuzzPlace').innerHTML = "<br>" + buzzName;
-				}
-			else{
-				document.getElementById('fizzBuzzPlace').innerHTML = "<br>" + i;
-				}
-			}
-		}*/
+                }
+
+                else if (!(i % 3) && i % 5) {
+
+                    document.write('<br>FIZZ');
+
+                }
+
+                else if (!(i % 5) && i % 3) {
+
+                    document.write('<br>BUZZ');
+
+                }
 
 
-		</script>
+                else {
+
+                    document.write('<br>' + i);
+
+                }
+
+            }
+
+            function createFIZZBUZZ() {
+
+                var fizzName = document.getElementById('FizzName').value;
+                var buzzName = document.getElementById('BuzzName').value;
+                var fizzBuzzName = fizzName + buzzName;
+                var maxNumber = document.getElementById('maxNumber').value;
+                var maxN = parseInt(maxNumber);
+                for (i = 1; i <= maxN; i++) {
+
+                    if (!(i % 3) && !(i % 5)) {
+
+                        document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + fizzBuzzName;
+                    }
+                    else if (!(i % 3) && i % 5) {
+
+                        document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + fizzName;
+                    }
+                    else if (!(i % 5) && i % 3) {
+                        document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + buzzName;
+                    }
+                    else {
+                        document.getElementById('fizzBuzzPlace').innerHTML += "<br>" + i;
+                    }
+                }
+            }
+
+            //iteration 4 ----------------------------------- accept number, then output at each iteration
+            //-----------------------------------------------if # /3, divide by 3, if not, add 1 or subtract 1, then divide by 3. stop at 1
+            function createDiv3() {
+
+                var numDiv3Str = document.getElementById('numberDiv3').value;
+                var numDiv3 = parseInt(numDiv3Str);
+                var newNum = 0;
+                for (i = 0; numDiv3 != 1; i++) {
+
+                    if (!(numDiv3 % 3)) {
+
+                        newNum = numDiv3 / 3;
+                        document.getElementById('getToOne').innerHTML += "<br>" + numDiv3 + " is divisible by 3 and produced " + newNum;
+                        numDiv3 = newNum;
+                    }
+
+                    else if (!((numDiv3 + 1) % 3)) {
+
+                        newNum = (numDiv3 + 1) / 3;
+                        document.getElementById('getToOne').innerHTML += "<br>" + numDiv3 + " plus 1 is divisible by 3 and produced " + newNum;
+                        numDiv3 = newNum;
+                    }
+
+                    else if (!((numDiv3 - 1) % 3)) {
+
+                        newNum = (numDiv3 - 1) / 3;
+                        document.getElementById('getToOne').innerHTML += "<br>" + numDiv3 + " minus 1 is divisible by 3 and produced " + newNum;
+                        numDiv3 = newNum;
+                    }
 
 
-		<br />
-		<textarea id="FizzName" placeholder="Enter FIZZ word"></textarea>
-		<br />
-		<textarea id="BuzzName" placeholder="Enter BUZZ Name"></textarea>
-		<br />
-		<textarea id="maxNumber" placeholder="Enter Number To Count To"></textarea>
-		<br />
-		<button onclick="createFIZZBUZZ()">Create FIZZBUZZ</button>
-		<br />
-	<p id="fizzBuzzPlace">     </p>
+                }
 
-	</p>
+                document.getElementById('getToOne').innerHTML += "<br> Took " + i + " iterations to get to 1";
+
+
+            }
+
+
+
+
+
+            //Strings 4 ---------------------------------------make function that accepts a string and returns how many triples are within it (triples may overlap)
+
+
+
+            function checkTriple() {
+
+                var striiing = document.getElementById('Striiing').value;
+                var arrray = striiing.split('');
+                var arrrayLength = arrray.length;
+                //console.log(arrray);
+
+                var i = 0;
+                var j = i + 1;
+                var k = j + 1;
+                var N = 0;
+
+
+                for (i = 0; i < (arrrayLength - 2); i++) {
+
+                    if (arrray[i] == arrray[j] && arrray[j] == arrray[k] && arrray[i] == arrray[k]) {
+
+
+                       N++
+
+                        
+
+                    }
+
+                    document.getElementById('tripleStriiing').innerHTML += "<br>There are " + N + " Triples in your string! ";
+
+                }
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+        <br />
+        <textarea id="FizzName" placeholder="Enter FIZZ word"></textarea>
+        <br />
+        <textarea id="BuzzName" placeholder="Enter BUZZ Name"></textarea>
+        <br />
+        <textarea id="maxNumber" placeholder="Enter Number To Count To"></textarea>
+        <br />
+        <button onclick="createFIZZBUZZ()">Create FIZZBUZZ</button>
+        <br />
+    <p id="fizzBuzzPlace">     </p>
+
+
+
+
+    <br />
+    <textarea id="numberDiv3" placeholder="Enter Any Number"></textarea>
+    <br />
+    <button onclick="createDiv3()">Divide me by 3!</button>
+    <br />
+    <p id="getToOne"></p>
+
+
+
+
+    <br />
+    <textarea id="Striiing" placeholder="Mash The Keyboard"></textarea>
+    <br />
+    <button onclick="checkTriple()">Check For Triples!</button>
+    <br />
+    <p id="tripleStriiing"></p>
+    </p>
 
 
 
