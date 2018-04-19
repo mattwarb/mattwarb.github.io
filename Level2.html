@@ -195,8 +195,9 @@
 
 
                 var paragraph = document.createElement("p"); //create new element <p>
-                var node = document.createTextNode("Your words will appear here"); //this puts text in the element
+                var node = document.createTextNode(""); //this puts text in the element
                 paragraph.appendChild(node); //attaches the two together
+              
                 paragraph.setAttribute("id","masterPara");
                 var element = document.getElementById("para"); //find another element
                 element.appendChild(paragraph); //attach your element to the found element
@@ -213,12 +214,12 @@
                 box.setAttribute("Id", "Input");
                 //buttons
                 var inputButton = document.createElement("button");
-                inputButton.setAttribute("onlick", "fillParagraph()");
+                inputButton.setAttribute("onclick", "fillParagraph()");
                 var words = document.createTextNode("Fill Paragraph");
                 inputButton.appendChild(words);
 
                 var deleteButton = document.createElement("button");
-                deleteButton.setAttribute("onlick", "deleteParagraph()");
+                deleteButton.setAttribute("onclick", "deleteParagraph()");
                 var words = document.createTextNode("Delete Paragraph");
                 deleteButton.appendChild(words);
 
@@ -232,25 +233,34 @@
                 newElement.appendChild(deleteButton);
                 
                
-                function fillParagraph() {
-
-                    var inputString = document.getElementById("Input").value;
-                    console.log(inputString);
-                    var textString = document.createTextNode("inputString");
-                    var newElement3 = document.getElementById("masterPara");
-                    newElement3.appendChild(textString);
-
-
-                }
-                   
+                 
 
             }
 
-         
+            function fillParagraph() {
+
+                var inputString = document.getElementById("Input").value;
+                console.log(inputString);
+                var textString = document.createTextNode(inputString);
+                var para2 = document.createElement("masterPara2");
+                var node2 = document.createTextNode(textString);
+                para2.appendChild(textString);
+                var newElement2 = document.getElementById("masterPara");
+
+                var brk4 = document.createElement("br");
+
+                newElement2.appendChild(brk4);
+                newElement2.appendChild(para2);
+                
+               
+
+
+                }       
+
 
             function deleteParagraph() {
 
-
+                        //FINISH LATER YOU KNOW HOW DOM WORKS
 
 
             }
